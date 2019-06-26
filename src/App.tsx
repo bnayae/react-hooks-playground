@@ -1,4 +1,5 @@
 // https://fettblog.eu/typescript-react/hooks/
+// https://medium.com/@jrwebdev/react-hooks-in-typescript-88fce7001d0d
 
 import React from "react";
 import logo from "./logo.svg";

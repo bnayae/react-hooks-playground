@@ -4,6 +4,7 @@ import * as React from "react";
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
+import { number } from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   textField: {
@@ -18,12 +19,15 @@ export interface ISimpleTextsProps {}
 export default function SimpleTexts(props: ISimpleTextsProps) {
   const classes = useStyles();
   const [name, setName] = useState("Bnaya");
-  const [password, setPassword] = useState("Bnaya");
-  const [email, setEmail] = useState("Bnaya");
+  const [password, setPassword] = useState("1234");
+  const [email, setEmail] = useState("bnaya@weknow.com");
+  const [error, setError] = useState("invalid data");
+  const [numeric, setNumeric] = useState(0);
 
   function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
+
   return (
     <>
       <TextField
@@ -54,6 +58,7 @@ export default function SimpleTexts(props: ISimpleTextsProps) {
         label="Password"
         className={classes.textField}
         type="password"
+        value={password}
         autoComplete="current-password"
         margin="dense"
         variant="outlined"
@@ -63,8 +68,42 @@ export default function SimpleTexts(props: ISimpleTextsProps) {
         label="Email"
         className={classes.textField}
         type="email"
-        name={email}
+        value={email}
         autoComplete="email"
+        margin="dense"
+        variant="outlined"
+      />
+      <TextField
+        id="outlined-error"
+        error
+        label="Error"
+        className={classes.textField}
+        value={error}
+        margin="dense"
+        variant="outlined"
+      />
+      <TextField
+        id="outlined-number"
+        label="Number"
+        value={numeric}
+        type="number"
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          setNumeric(e.target.valueAsNumber);
+        }}
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true
+        }}
+        margin="dense"
+        variant="outlined"
+      />
+      <TextField
+        id="outlined-search"
+        label="Search field"
+        type="search"
+        value={name}
+        onChange={handleNameChange}
+        className={classes.textField}
         margin="dense"
         variant="outlined"
       />
