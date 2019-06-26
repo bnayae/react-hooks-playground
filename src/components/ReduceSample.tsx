@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export function ReducerSample(props: IReducerSampleProps) {
+export default function ReducerSample(props: IReducerSampleProps) {
   const classes = useStyles();
 
   const [state, dispatch] = useReducer(

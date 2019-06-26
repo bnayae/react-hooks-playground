@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 
 export interface ISimpleTextsProps {}
 
-export function SimpleTexts(props: ISimpleTextsProps) {
+export default function SimpleTexts(props: ISimpleTextsProps) {
   const classes = useStyles();
   const [name, setName] = useState("Bnaya");
   const [password, setPassword] = useState("Bnaya");

@@ -1,9 +1,12 @@
+// https://fettblog.eu/typescript-react/hooks/
+
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { SimpleTexts } from "./components/SimpleTexts";
-import { ReducerSample } from "./components/ReduceSample";
 import { Divider } from "@material-ui/core";
+import SimpleTexts from "./components/SimpleTexts";
+import ReducerSample from "./components/ReduceSample";
+import DropdownSample from "./components/DropdownSample";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +14,8 @@ const App: React.FC = () => {
       <SimpleTexts />
       <Divider />
       <ReducerSample />
+      <Divider />
+      <DropdownSample />
     </div>
   );
 };
