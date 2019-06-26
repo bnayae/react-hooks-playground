@@ -1,10 +1,7 @@
-// https://www.youtube.com/watch?v=dpw9EHDh2bM&list=PLxOjILkIACgAdunnsCvfhZDbFxaAi_95Q&index=9&t=0s
-
 import * as React from "react";
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
-import { number } from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   textField: {
@@ -81,6 +78,7 @@ export default function SimpleTexts(props: ISimpleTextsProps) {
         value={error}
         margin="dense"
         variant="outlined"
+        helperText="Fix is needed"
       />
       <TextField
         id="outlined-number"
