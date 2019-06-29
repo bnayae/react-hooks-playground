@@ -10,6 +10,8 @@ import SimpleTexts from "./components/SimpleTexts";
 import ReducerSample from "./components/ReduceSample";
 import DropdownSample from "./components/DropdownSample";
 import DropdownTextSample from "./components/DropdownTextSample";
+import EffectSample from "./components/EffectSample";
+import ContextRoot from "./components/ContextSample/ContextRoot";
 
 const App: React.FC = () => {
   return (
@@ -21,6 +23,10 @@ const App: React.FC = () => {
       <DropdownSample />
       <Divider />
       <DropdownTextSample />
+      <Divider />
+      <EffectSample />
+      <Divider />
+      <ContextRoot />
     </div>
   );
 };
