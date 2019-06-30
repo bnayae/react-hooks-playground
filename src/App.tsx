@@ -12,6 +12,7 @@ import DropdownSample from "./components/DropdownSample";
 import DropdownTextSample from "./components/DropdownTextSample";
 import EffectSample from "./components/EffectSample";
 import ContextRoot from "./components/ContextSample/ContextRoot";
+import RefSample from "./components/RefSample";
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,8 @@ const App: React.FC = () => {
       <EffectSample />
       <Divider />
       <ContextRoot />
+      <Divider />
+      <RefSample />
     </div>
   );
 };
