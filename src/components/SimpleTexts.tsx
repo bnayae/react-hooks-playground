@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useDebugValue } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
 
@@ -16,10 +16,15 @@ export interface ISimpleTextsProps {}
 export default function SimpleTexts(props: ISimpleTextsProps) {
   const classes = useStyles();
   const [name, setName] = useState("Bnaya");
+  useDebugValue(isEmpty(name) ? "empty" : "name");
   const [password, setPassword] = useState("1234");
   const [email, setEmail] = useState("bnaya@weknow.com");
   const [error, setError] = useState("invalid data");
   const [numeric, setNumeric] = useState(0);
+
+  function isEmpty(value: string): boolean {
+    return value == null || value.length === 0;
+  }
 
   function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
